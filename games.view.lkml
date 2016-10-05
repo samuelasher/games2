@@ -17,7 +17,7 @@ view: games {
     link: {
       url: "/explore/games/games?fields=games.console,games.name&f[games.console]={{ value }}&show=data"
       label: "Games of this Console"
-      }
+    }
   }
 
   dimension: platform {
@@ -62,24 +62,24 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Game%Boy%'
-        OR ${console} LIKE '%Epoch%Pocket%'
-        OR ${console} LIKE '%Game Gear%'
-        OR ${console} LIKE '%Game.Com%'
-        OR ${console} LIKE '%Gizmondo%'
-        OR ${console} LIKE '%GP2X%'
-        OR ${console} LIKE '%GP32%'
-        OR ${console} LIKE '%Lynx%'
-        OR ${console} LIKE '%Linux%'
-        OR ${console} LIKE '%Microvision%'
-        OR ${console} LIKE '%Neo Geo Pocket%'
-        OR ${console} LIKE '%Nintendo%DS%'
-        OR ${console} LIKE '%PSP%'
-        OR ${console} LIKE '%PS Vita%'
-        OR ${console} LIKE '%Supervision%'
-        OR ${console} LIKE '%TI-99%'
-        OR ${console} LIKE '%WonderSwan%'
-        OR ${console} LIKE '%Zodiac%'
-                       ;;
+                  OR ${console} LIKE '%Epoch%Pocket%'
+                  OR ${console} LIKE '%Game Gear%'
+                  OR ${console} LIKE '%Game.Com%'
+                  OR ${console} LIKE '%Gizmondo%'
+                  OR ${console} LIKE '%GP2X%'
+                  OR ${console} LIKE '%GP32%'
+                  OR ${console} LIKE '%Lynx%'
+                  OR ${console} LIKE '%Linux%'
+                  OR ${console} LIKE '%Microvision%'
+                  OR ${console} LIKE '%Neo Geo Pocket%'
+                  OR ${console} LIKE '%Nintendo%DS%'
+                  OR ${console} LIKE '%PSP%'
+                  OR ${console} LIKE '%PS Vita%'
+                  OR ${console} LIKE '%Supervision%'
+                  OR ${console} LIKE '%TI-99%'
+                  OR ${console} LIKE '%WonderSwan%'
+                  OR ${console} LIKE '%Zodiac%'
+                                 ;;
         label: "Handheld"
       }
       when: {
@@ -161,18 +161,18 @@ view: games {
     case: {
       when: {
         sql: ${console} LIKE '%Nintendo%'
-        OR ${console} LIKE '%GameCube%'
-        OR ${console} LIKE '%Game Boy%'
-        OR ${console} LIKE '%NES'
-        OR ${console} LIKE 'Virtual Boy'
-        OR ${console} LIKE 'Wii%'
-             ;;
+                  OR ${console} LIKE '%GameCube%'
+                  OR ${console} LIKE '%Game Boy%'
+                  OR ${console} LIKE '%NES'
+                  OR ${console} LIKE 'Virtual Boy'
+                  OR ${console} LIKE 'Wii%'
+                       ;;
         label: "Nintendo"
       }
       when: {
         sql: ${console} LIKE '%PlayStation%'
-        OR ${console} LIKE 'PS%'
-          ;;
+                  OR ${console} LIKE 'PS%'
+                    ;;
         label: "Sony"
       }
       when: {
@@ -182,9 +182,9 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Atari%'
-        OR ${console} LIKE '%Jaguar%'
-        OR ${console} LIKE '%Lynx%'
-          ;;
+                  OR ${console} LIKE '%Jaguar%'
+                  OR ${console} LIKE '%Lynx%'
+                    ;;
         label: "Atari"
       }
       when: {
@@ -194,10 +194,10 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Acorn%'
-        OR ${console} LIKE '%Atom%'
-        OR ${console} LIKE '%Electron%'
-        OR ${console} LIKE '%BBC Micro%'
-                    ;;
+                  OR ${console} LIKE '%Atom%'
+                  OR ${console} LIKE '%Electron%'
+                  OR ${console} LIKE '%BBC Micro%'
+                              ;;
         label: "Acorn"
       }
       when: {
@@ -221,12 +221,12 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Apple%'
-        OR ${console} LIKE '%iPad%'
-        OR ${console} LIKE '%iPod%'
-        OR ${console} LIKE '%iPhone%'
-        OR ${console} LIKE '%Macintosh%'
-        OR ${console} LIKE '%Pippin%'
-          ;;
+                  OR ${console} LIKE '%iPad%'
+                  OR ${console} LIKE '%iPod%'
+                  OR ${console} LIKE '%iPhone%'
+                  OR ${console} LIKE '%Macintosh%'
+                  OR ${console} LIKE '%Pippin%'
+                    ;;
         label: "Apple"
       }
       when: {
@@ -271,10 +271,10 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%DOS%'
-        OR ${console} LIKE '%MSX%'
-        OR ${console} LIKE 'Window%'
-        OR ${console} LIKE 'Xbox%'
-          ;;
+                  OR ${console} LIKE '%MSX%'
+                  OR ${console} LIKE 'Window%'
+                  OR ${console} LIKE 'Xbox%'
+                    ;;
         label: "Microsoft"
       }
       when: {
@@ -294,11 +294,11 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Dreamcast%'
-        OR ${console} LIKE '%Genesis%'
-        OR ${console} LIKE '%SEGA%'
-        OR ${console} LIKE '%Game Gear%'
-        OR ${console} LIKE '%SG-1000%'
-          ;;
+                  OR ${console} LIKE '%Genesis%'
+                  OR ${console} LIKE '%SEGA%'
+                  OR ${console} LIKE '%Game Gear%'
+                  OR ${console} LIKE '%SG-1000%'
+                    ;;
         label: "SEGA"
       }
       when: {
@@ -318,8 +318,8 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Game.Com%'
-        OR ${console} LIKE '%Gizmondo%'
-          ;;
+                  OR ${console} LIKE '%Gizmondo%'
+                    ;;
         label: "Tiger"
       }
       when: {
@@ -329,8 +329,8 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Intellivision%'
-        OR ${console} LIKE '%Mattel%'
-          ;;
+                  OR ${console} LIKE '%Mattel%'
+                    ;;
         label: "Mattel"
       }
       when: {
@@ -350,8 +350,8 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%Microvision%'
-        OR ${console} LIKE '%Vectrex%'
-          ;;
+                  OR ${console} LIKE '%Vectrex%'
+                    ;;
         label: "Milton Bradley"
       }
       when: {
@@ -361,8 +361,8 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%N-Gage%'
-        OR ${console} LIKE '%Symbian%'
-          ;;
+                  OR ${console} LIKE '%Symbian%'
+                    ;;
         label: "Nokia"
       }
       when: {
@@ -397,14 +397,14 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%PC-%'
-        OR ${console} LIKE '%Grafx%'
-          ;;
+                  OR ${console} LIKE '%Grafx%'
+                    ;;
         label: "NEC"
       }
       when: {
         sql: ${console} LIKE '%Philips%'
-        OR ${console} LIKE '%Videopac%'
-          ;;
+                  OR ${console} LIKE '%Videopac%'
+                    ;;
         label: "Philips"
       }
       when: {
@@ -429,8 +429,8 @@ view: games {
       }
       when: {
         sql: ${console} LIKE '%ZX%'
-        OR  ${console} LIKE '%Sinclair%'
-          ;;
+                  OR  ${console} LIKE '%Sinclair%'
+                    ;;
         label: "Sinclair"
       }
       when: {
@@ -486,7 +486,22 @@ view: games {
     type: number
     sql: ${TABLE}.year ;;
   }
-
+  dimension: company_bucketed {
+    type: string
+    sql: CASE WHEN ${company} LIKE '%Nintendo%' THEN 'Nintendo'
+          WHEN ${company} LIKE '%Ubi%oft%' THEN 'Ubisoft'
+    WHEN ${company} LIKE '%SEGA%' THEN 'SEGA'
+    WHEN ${company} LIKE '%Sony%' THEN 'Sony'
+    WHEN ${company} LIKE '%Capcom%' THEN 'Capcom'
+    WHEN ${company} LIKE '%Atari%' THEN 'Atari'
+    WHEN ${company} LIKE '%Microsoft%' THEN 'Microsoft'
+    WHEN ${company} LIKE '%Square Enix%' THEN 'Square Enix'
+    WHEN ${company} LIKE '%Electronic Arts%' THEN 'Electronic Arts'
+    WHEN ${company} LIKE '%KOEI%' THEN 'KOEI'
+    WHEN ${company} LIKE '%Konami%' THEN 'Konami'
+    WHEN ${company} LIKE '%Activision%' THEN 'Activision'
+            ELSE ${company} END;;
+  }
   measure: count {
     type: count
     drill_fields: [console, name]
