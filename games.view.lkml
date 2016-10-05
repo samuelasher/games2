@@ -502,6 +502,258 @@ view: games {
     WHEN ${company} LIKE '%Activision%' THEN 'Activision'
             ELSE ${company} END;;
   }
+
+  dimension: mascot {
+    type: string
+    alpha_sort: yes
+    case: {
+      when: {
+        sql: ${name} LIKE '%Mario%' ;;
+        label: "Mario"
+      }
+      when: {
+        sql: ${name} LIKE '%Sonic%' ;;
+        label: "Sonic the Hedgehog"
+      }
+      when: {
+        sql: ${name} LIKE '%Kirby%' ;;
+        label: "Kirby"
+      }
+      when: {
+        sql: ${name} LIKE '%Metroid%' ;;
+        label: "Samus"
+      }
+      when: {
+        sql: ${name} LIKE '%Zelda%' ;;
+        label: "Link"
+      }
+      when: {
+        sql: ${name} LIKE '%Pac-Man%' ;;
+        label: "Pac-Man"
+      }
+      when: {
+        sql: ${name} LIKE '%Pok%mon%' ;;
+        label: "Pikachu"
+      }
+      when: {
+        sql: ${name} LIKE '%Mega%Man%' ;;
+        label: "Mega Man"
+      }
+      when: {
+        sql: ${name} LIKE '%Street%Fighter%' ;;
+        label: "Ryu"
+      }
+      when: {
+        sql: ${name} LIKE '%Bonk%' ;;
+        label: "Bonk"
+      }
+      when: {
+        sql: ${name} LIKE '%Ratchet%Clank%' ;;
+        label: "Ratchet & Clank"
+      }
+      when: {
+        sql: ${name} LIKE '%Crash%Band%' ;;
+        label: "Crash Bandicoot"
+      }
+      when: {
+        sql: ${name} LIKE '%Donkey%Kong%';;
+        label: "Donkey Kong"
+      }
+      when: {
+        sql: ${name} LIKE '%Metal%Gear%';;
+        label: "Solid Snake"
+      }
+      when: {
+        sql: ${name} LIKE '%Castlevania%';;
+        label: "Simon Belmont"
+      }
+      when: {
+        sql: ${name} LIKE '%Final%Fantasy%';;
+        label: "Moogle"
+      }
+      when: {
+        sql: ${name} LIKE '%Luigi%';;
+        label: "Luigi"
+      }
+      when: {
+        sql: ${name} LIKE '%Tomb%Raider%';;
+        label: "Lara Croft"
+      }
+      when: {
+        sql: ${name} LIKE '%Tetris%';;
+        label: "Tetris"
+      }
+      when: {
+        sql: ${name} LIKE '%Mortal%Kombat%';;
+        label: "Sub Zero"
+      }
+      when: {
+        sql: ${name} LIKE '%Madden%';;
+        label: "John Madden"
+      }
+      when: {
+        sql: ${name} LIKE '%Resident%Evil%';;
+        label: "Resident Evil"
+      }
+      when: {
+        sql: ${name} LIKE '%Halo%';;
+        label: "Master Chief"
+      }
+      when: {
+        sql: ${name} LIKE '%Call of Duty%';;
+        label: "Captain Price"
+      }
+      when: {
+        sql: ${name} LIKE '%Worms%';;
+        label: "Worms"
+      }
+      when: {
+        sql: ${name} LIKE '%Duke%Nukem%';;
+        label: "Duke Nukem"
+      }
+      when: {
+        sql: ${name} LIKE '%Nathan%Drake%' OR ${name} LIKE '%Uncharted%';;
+        label: "Nathan Drake"
+      }
+      when: {
+        sql: ${name} LIKE '%Professor%Layton%';;
+        label: "Professor Layton"
+      }
+      when: {
+        sql: ${name} LIKE '%Ace%Attorney%';;
+        label: "Phoenix Wright"
+      }
+      when: {
+        sql: ${name} LIKE '%Dragon%Quest%';;
+        label: "Slime"
+      }
+    }
+  }
+
+  dimension: series {
+    type: string
+    alpha_sort: yes
+    case: {
+      when: {
+        sql: ${name} LIKE '%Mario%' OR ${mascot} LIKE '%Luigi%' ;;
+        label: "Mario"
+      }
+      when: {
+        sql: ${name} LIKE '%Sonic%' ;;
+        label: "Sonic the Hedgehog"
+      }
+      when: {
+        sql: ${name} LIKE '%Kirby%' ;;
+        label: "Kirby"
+      }
+      when: {
+        sql: ${name} LIKE '%Metroid%' ;;
+        label: "Metroid"
+      }
+      when: {
+        sql: ${name} LIKE '%Zelda%' ;;
+        label: "The Legend of Zelda"
+      }
+      when: {
+        sql: ${name} LIKE '%Pac-Man%' ;;
+        label: "Pac-Man"
+      }
+      when: {
+        sql: ${name} LIKE '%Pok%mon%' ;;
+        label: "Pokemon"
+      }
+      when: {
+        sql: ${name} LIKE '%Mega%Man%' ;;
+        label: "Mega Man"
+      }
+      when: {
+        sql: ${name} LIKE '%Street%Fighter%' ;;
+        label: "Street Fighter"
+      }
+      when: {
+        sql: ${name} LIKE '%Bonk%' ;;
+        label: "Bonk"
+      }
+      when: {
+        sql: ${name} LIKE '%Ratchet%Clank%' ;;
+        label: "Ratchet & Clank"
+      }
+      when: {
+        sql: ${name} LIKE '%Crash%Band%' ;;
+        label: "Crash Bandicoot"
+      }
+      when: {
+        sql: ${name} LIKE '%Donkey%Kong%';;
+        label: "Donkey Kong"
+      }
+      when: {
+        sql: ${name} LIKE '%Metal%Gear%';;
+        label: "Metal Gear"
+      }
+      when: {
+        sql: ${name} LIKE '%Castlevania%';;
+        label: "Castlevania"
+      }
+      when: {
+        sql: ${name} LIKE '%Final%Fantasy%';;
+        label: "Final Fantasy"
+      }
+      when: {
+        sql: ${name} LIKE '%Tomb%Raider%';;
+        label: "Tomb Raider"
+      }
+      when: {
+        sql: ${name} LIKE '%Tetris%';;
+        label: "Tetris"
+      }
+      when: {
+        sql: ${name} LIKE '%Mortal%Kombat%';;
+        label: "Mortal Kombat"
+      }
+      when: {
+        sql: ${name} LIKE '%Madden%';;
+        label: "Madden NFL"
+      }
+      when: {
+        sql: ${name} LIKE '%Resident%Evil%';;
+        label: "Resident Evil"
+      }
+
+      when: {
+        sql: ${name} LIKE '%Halo%';;
+        label: "Halo"
+      }
+      when: {
+        sql: ${name} LIKE '%Call of Duty%';;
+        label: "Call of Duty"
+      }
+      when: {
+        sql: ${name} LIKE '%Worms%';;
+        label: "Worms"
+      }
+      when: {
+        sql: ${name} LIKE '%Duke%Nukem%';;
+        label: "Duke Nukem"
+      }
+      when: {
+        sql: ${name} LIKE '%Nathan%Drake%' OR ${name} LIKE '%Uncharted%';;
+        label: "Uncharted"
+      }
+      when: {
+        sql: ${name} LIKE '%Professor%Layton%';;
+        label: "Professor Layton"
+      }
+      when: {
+        sql: ${name} LIKE '%Ace%Attorney%';;
+        label: "Phoenix Wright"
+      }
+      when: {
+        sql: ${name} LIKE '%Dragon%Quest%';;
+        label: "Dragon Quest"
+      }
+    }
+  }
+
   measure: count {
     type: count
     drill_fields: [console, name]
