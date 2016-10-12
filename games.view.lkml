@@ -20,6 +20,13 @@ view: games {
     }
   }
 
+  dimension: console_bucketed {
+    type: string
+    sql: CASE WHEN ${platform} = 'Computer' THEN 'Computer'
+         ELSE ${console} END;;
+  }
+
+
   dimension: platform {
     type: string
     alpha_sort: yes
@@ -627,6 +634,10 @@ view: games {
         sql: ${name} LIKE '%Dragon%Quest%';;
         label: "Slime"
       }
+      when: {
+        sql: ${name} LIKE '%Bomberman%' ;;
+        label: "Bomberman"
+      }
     }
   }
 
@@ -653,6 +664,10 @@ view: games {
       when: {
         sql: ${name} LIKE '%Zelda%' ;;
         label: "The Legend of Zelda"
+      }
+      when: {
+        sql: ${name} LIKE '%Bomberman%' ;;
+        label: "Bomberman"
       }
       when: {
         sql: ${name} LIKE '%Pac-Man%' ;;
