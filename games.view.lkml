@@ -21,6 +21,8 @@ view: games {
   }
 
   dimension: console_bucketed {
+    label: "Console"
+    drill_fields: [company, name, series, year]
     type: string
     sql: CASE WHEN ${platform} = 'Computer' THEN 'Computer'
          ELSE ${console} END;;
@@ -30,6 +32,7 @@ view: games {
   dimension: platform {
     type: string
     alpha_sort: yes
+    drill_fields: [console_bucketed, company, name, series, year]
     case: {
       when: {
         sql: ${console} LIKE '%GameCube%'
@@ -165,6 +168,8 @@ view: games {
   dimension: console_company {
     type: string
     alpha_sort: yes
+    drill_fields: [platform, console_bucketed, company, name, series, year]
+
     case: {
       when: {
         sql: ${console} LIKE '%Nintendo%'
