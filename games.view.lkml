@@ -13,7 +13,7 @@ view: games {
 
   dimension: console {
     type: string
-    sql: regexp_replace(regexp_replace(${TABLE}.console, '\s+$', ''), '^\s+', '') ;;
+    sql: TRIM(Replace(Replace(Replace(${TABLE}.console,'\t',''),'\n',''),'\r','')) ;;
     link: {
       url: "/explore/games/games?fields=games.console,games.name&f[games.console]={{ value }}&show=data"
       label: "Games of this Console"
