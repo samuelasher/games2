@@ -16,7 +16,7 @@ view: games {
     hidden: yes
     sql: TRIM(Replace(Replace(Replace(${TABLE}.console,'\t',''),'\n',''),'\r','')) ;;
     link: {
-      url: "/explore/games/games?fields=games.console,games.name&f[games.console]={{ value }}&show=data"
+      url: "/explore/games/games?fields=games.year,games.name&f[games.console]={{ value | url_encode }}&show=data"
       label: "Games of this Console"
     }
   }
