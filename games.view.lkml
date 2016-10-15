@@ -578,7 +578,7 @@ view: games {
       }
       when: {
         sql: ${name} LIKE '%Castlevania%';;
-        label: "Simon Belmont"
+        label: "Dracula"
       }
       when: {
         sql: ${name} LIKE '%Final%Fantasy%';;
@@ -684,7 +684,7 @@ view: games {
         label: "Pokemon"
       }
       when: {
-        sql: ${name} LIKE '%Mega%Man%' ;;
+        sql: ${name} LIKE '%Mega Man%' ;;
         label: "Mega Man"
       }
       when: {
