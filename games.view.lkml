@@ -775,6 +775,66 @@ view: games {
     }
   }
 
+  dimension: mascot_gif {
+    sql: ${mascot};;
+    html: html: |
+
+    <div style="width: 65px; text-align: center; margin: auto">
+    <a href="{{mascot}}" target="_self">
+    <img src=
+    {% if value == 'Moogle' %}
+    "http://i.giphy.com/JmcPYoQJ1vugM.gif"
+    {% elsif value == 'Sonic The Hedgehog' %}
+    "http://i.giphy.com/bAkrCIBfSpmI8.gif"
+    {% elsif value == 'Mario' %}
+    "http://i.giphy.com/YTtqB2j5EN7IA.gif"
+    {% elsif value == 'Mega Man' %}
+    "http://i.giphy.com/PK55P6udUmSPu.gif"
+    {% elsif value == 'Captain Price' %}
+    "http://i.giphy.com/T8rtfi2iK00IU.gif"
+    {% elsif value == 'Pac-Man' %}
+    "http://i.giphy.com/fkvSM0uNJwYww.gif"
+    {% elsif value == 'John Madden' %}
+    "http://i.giphy.com/kNdjr0nRPHxTO.gif"
+    {% elsif value == 'Ryu' %}
+    "http://i.giphy.com/HCrOYRonZVwVa.gif"
+    {% elsif value == 'Lara Croft' %}
+    "http://i.giphy.com/WkuLHM3uGHSAE.gif"
+    {% elsif value == 'Tetris' %}
+    "http://i.giphy.com/CDkx9svvP5KGQ.gif"
+    {% elsif value == 'Pikachu' %}
+    "http://i.giphy.com/qcx4hzsY8n6FO.gif"
+    {% elsif value == 'Worms' %}
+    "http://cdn.lifebuzz.com/images/65165/lifebuzz-a04e76a84e097c64b002b0b2b0168dda-original.gif"
+    {% elsif value == 'Resident Evil' %}
+    "http://i.giphy.com/BHqRreBXNXVoQ.gif"
+    {% elsif value == 'Sub Zero' %}
+    "http://media2.giphy.com/media/Zw4WeJxOoXsTm/giphy.gif"
+    {% elsif value == 'Bomberman' %}
+    "http://www.doggifpage.com/gifs/144.gif"
+    {% elsif value == 'Donkey Kong' %}
+    "https://media.giphy.com/media/pOYwydwmrrvNe/giphy.gif"
+    {% elsif value == 'Link' %}
+    "https://media.giphy.com/media/jj4GnsarznBo4/giphy.gif"
+    {% elsif value == 'Kirby' %}
+    "https://media.giphy.com/media/5AJNZXNK4QhFK/giphy.gif"
+    {% elsif value == 'Slime' %}
+    "https://media.giphy.com/media/cOo3aeD9Jzxh6/giphy.gif"
+    {% elsif value == 'Dracula' %}
+    "https://media.giphy.com/media/quxOUvoBBOQHC/giphy.gif"
+    {% elsif value == 'Bonk' %}
+    "https://media.giphy.com/media/tP3Tu61F2RBZe/giphy.gif"
+    {% elsif value == 'Solid Snake' %}
+    "https://media.giphy.com/media/oDLDbBgf0dkis/giphy.gif"
+    {% else %}
+    "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
+    {% endif %}
+    alt="{{value}}" style="height: 50px; width: 50px; border-radius: 25px; margin-bottom: 5px;" />
+    </br>{{ value }}
+    </div>
+    </a> ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [console, name]
