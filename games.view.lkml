@@ -549,7 +549,7 @@ view: games {
         label: "Pikachu"
       }
       when: {
-        sql: ${name} LIKE '%Mega%Man%' ;;
+        sql: ${name} LIKE '%Mega Man%' ;;
         label: "Mega Man"
       }
       when: {
