@@ -521,6 +521,10 @@ view: games {
     alpha_sort: yes
     case: {
       when: {
+        sql: ${name} LIKE '%Rayman%' ;;
+        label: "Rayman"
+      }
+      when: {
         sql: ${name} LIKE '%Mario%' ;;
         label: "Mario"
       }
@@ -582,7 +586,7 @@ view: games {
       }
       when: {
         sql: ${name} LIKE '%Final%Fantasy%';;
-        label: "Moogle"
+        label: "Cactuar"
       }
       when: {
         sql: ${name} LIKE '%Luigi%';;
@@ -654,6 +658,10 @@ view: games {
       when: {
         sql: ${name} LIKE '%Mario%' OR ${mascot} LIKE '%Luigi%' ;;
         label: "Mario"
+      }
+      when: {
+        sql: ${name} LIKE '%Rayman%' ;;
+        label: "Rayman"
       }
       when: {
         sql: ${name} LIKE '%Sonic%' ;;
@@ -777,15 +785,15 @@ view: games {
 
   dimension: mascot_gif {
     sql: ${mascot};;
-    html: html: |
+    html:
 
     <div style="width: 65px; text-align: center; margin: auto">
     <a href="{{mascot}}" target="_self">
     <img src=
-    {% if value == 'Moogle' %}
+    {% if value == 'Cactuar' %}
     "http://i.giphy.com/JmcPYoQJ1vugM.gif"
-    {% elsif value == 'Sonic The Hedgehog' %}
-    "http://i.giphy.com/bAkrCIBfSpmI8.gif"
+    {% elsif value == 'Sonic the Hedgehog' %}
+    "http://i.giphy.com/13nN1XlbXhqqTC.gif"
     {% elsif value == 'Mario' %}
     "http://i.giphy.com/YTtqB2j5EN7IA.gif"
     {% elsif value == 'Mega Man' %}
@@ -805,32 +813,52 @@ view: games {
     {% elsif value == 'Pikachu' %}
     "http://i.giphy.com/qcx4hzsY8n6FO.gif"
     {% elsif value == 'Worms' %}
-    "http://cdn.lifebuzz.com/images/65165/lifebuzz-a04e76a84e097c64b002b0b2b0168dda-original.gif"
+    "http://i.giphy.com/j0tASyEf9wH6M.gif"
     {% elsif value == 'Resident Evil' %}
-    "http://i.giphy.com/BHqRreBXNXVoQ.gif"
+    "http://i.giphy.com/hji6ZMztu4unm.gif"
     {% elsif value == 'Sub Zero' %}
-    "http://media2.giphy.com/media/Zw4WeJxOoXsTm/giphy.gif"
+    "http://i.giphy.com/72v5BY3vFkSCA.gif"
     {% elsif value == 'Bomberman' %}
-    "http://www.doggifpage.com/gifs/144.gif"
+    "https://s18.postimg.org/gl37if915/ezgif_842190678.gif"
     {% elsif value == 'Donkey Kong' %}
-    "https://media.giphy.com/media/pOYwydwmrrvNe/giphy.gif"
+    "http://i.giphy.com/8zjsQY3eS2WIw.gif"
     {% elsif value == 'Link' %}
-    "https://media.giphy.com/media/jj4GnsarznBo4/giphy.gif"
+    "https://s9.postimg.org/9nwg7eqsf/ezgif_3980330143.gif"
     {% elsif value == 'Kirby' %}
-    "https://media.giphy.com/media/5AJNZXNK4QhFK/giphy.gif"
-    {% elsif value == 'Slime' %}
-    "https://media.giphy.com/media/cOo3aeD9Jzxh6/giphy.gif"
+    "http://i.giphy.com/wRmOK4J2261gI.gif"
     {% elsif value == 'Dracula' %}
-    "https://media.giphy.com/media/quxOUvoBBOQHC/giphy.gif"
+    "https://s15.postimg.org/3su4bhmob/ezgif_1970490436.gif"
     {% elsif value == 'Bonk' %}
-    "https://media.giphy.com/media/tP3Tu61F2RBZe/giphy.gif"
+    "https://s17.postimg.org/ln3t7dmpr/ezgif_4114690391.gif"
     {% elsif value == 'Solid Snake' %}
-    "https://media.giphy.com/media/oDLDbBgf0dkis/giphy.gif"
+    "https://s21.postimg.org/r9iqv9giv/ezgif_1075249640.gif"
+    {% elsif value == 'Duke Nukem' %}
+    "http://i.giphy.com/PFDKWUsh5auQg.gif"
+    {% elsif value == 'Master Chief' %}
+    "http://i.giphy.com/RzYrhuxnoe91K.gif"
+    {% elsif value == 'Crash Bandicoot' %}
+    "https://s18.postimg.org/nu0r9jrtl/ezgif_2055134094.gif"
+    {% elsif value == 'Samus' %}
+    "https://s18.postimg.org/ldyxvp9qx/ezgif_3754811271.gif"
+    {% elsif value == 'Nathan Drake' %}
+    "http://i.giphy.com/WjchWfOoa4RUs.gif"
+    {% elsif value == 'Ratchet & Clank' %}
+    "https://s12.postimg.org/3psvj9c99/ezgif_2117624514.gif"
+    {% elsif value == 'Phoenix Wright' %}
+    "http://i.giphy.com/eXgOq9ZqvcHu.gif"
+    {% elsif value == 'Luigi' %}
+    "http://i.giphy.com/pbamSoMhpbL0I.gif"
+    {% elsif value == 'Professor Layton' %}
+    "https://s11.postimg.org/ubdtxjloz/ezgif_2375709908.gif"
+    {% elsif value == 'Slime' %}
+    "https://s9.postimg.org/y2ttxfqj3/ezgif_2678558225.gif"
+    {% elsif value == 'Rayman' %}
+    "http://i.giphy.com/bDUfHeBl80tLa.gif"
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
-    alt="{{value}}" style="height: 50px; width: 50px; border-radius: 25px; margin-bottom: 5px;" />
-    </br>{{ value }}
+    alt="{{series}}" style="height: 50px; width: 50px; border-radius: 25px; margin-bottom: 5px;" />
+    </br>{{ series }}
     </div>
     </a> ;;
   }
