@@ -492,7 +492,7 @@ view: games {
 
   dimension: name {
     type: string
-    sql: ${TABLE}.name ;;
+    sql: REPLACE(${TABLE}.name,'Pok?', 'Poké') ;;
   }
 
   dimension: year {
@@ -553,7 +553,7 @@ view: games {
         label: "Pac-Man"
       }
       when: {
-        sql: ${name} LIKE '%Pok%mon%' ;;
+        sql: ${name} LIKE '%Pokémon%' ;;
         label: "Pikachu"
       }
       when: {
@@ -722,8 +722,8 @@ view: games {
         label: "Pac-Man"
       }
       when: {
-        sql: ${name} LIKE '%Pok%mon%' ;;
-        label: "Pokemon"
+        sql: ${name} LIKE '%Pokémon%' ;;
+        label: "Pokémon"
       }
       when: {
         sql: ${name} LIKE '%Mega Man%' ;;
@@ -1074,6 +1074,11 @@ view: games {
     alt="{{series}}" style="height: 300px; width: 300px; border-radius: 20px; margin-bottom: 5px;" />
     </div>
      ;;
+  }
+  dimension:  is_virtual_console {
+    type: yesno
+    hidden: yes
+    sql: (${console} = 'Wii' AND ${year} < 2006) OR (${console} = 'Nintendo 3DS' AND ${year} < 2011) ;;
   }
 
   measure: count {
