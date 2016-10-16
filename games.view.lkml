@@ -793,15 +793,15 @@ view: games {
     {% if value == 'Cactuar' %}
     "https://s11.postimg.org/7s4y777pv/ezgif_1339250537.gif"
     {% elsif value == 'Sonic the Hedgehog' %}
-    "http://i.giphy.com/13nN1XlbXhqqTC.gif"
+    "https://s12.postimg.org/imkt6r1zh/ezgif_2133819447.gif"
     {% elsif value == 'Mario' %}
-    "http://i.giphy.com/YTtqB2j5EN7IA.gif"
+    "https://s22.postimg.org/tqon0ma01/ezgif_3681071909.gif"
     {% elsif value == 'Mega Man' %}
     "http://i.giphy.com/PK55P6udUmSPu.gif"
     {% elsif value == 'Captain Price' %}
     "http://i.giphy.com/T8rtfi2iK00IU.gif"
     {% elsif value == 'Pac-Man' %}
-    "http://i.giphy.com/fkvSM0uNJwYww.gif"
+    "https://s16.postimg.org/gfknpifs5/ezgif_2576536318.gif"
     {% elsif value == 'John Madden' %}
     "http://i.giphy.com/kNdjr0nRPHxTO.gif"
     {% elsif value == 'Ryu' %}
@@ -809,7 +809,7 @@ view: games {
     {% elsif value == 'Lara Croft' %}
     "http://i.giphy.com/WkuLHM3uGHSAE.gif"
     {% elsif value == 'Tetris' %}
-    "http://i.giphy.com/CDkx9svvP5KGQ.gif"
+    "https://s13.postimg.org/ceh4m2ijr/ezgif_1011869008.gif"
     {% elsif value == 'Pikachu' %}
     "http://i.giphy.com/qcx4hzsY8n6FO.gif"
     {% elsif value == 'Worms' %}
@@ -857,7 +857,7 @@ view: games {
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
-    alt="{{series}}" style="height: 75px; width: 75px; border-radius: 15px; margin-bottom: 5px;" />
+    alt="{{series}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
     </br>{{ series }}
     </div>
     </a> ;;
