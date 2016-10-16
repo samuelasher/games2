@@ -668,7 +668,10 @@ view: games {
     alpha_sort: yes
     case: {
       when: {
-        sql: ${name} LIKE '%Mario %' OR ${mascot} LIKE '%Luigi%' ;;
+        sql: (${name} LIKE '%Mario %'
+        OR ${name} LIKE '%Luigi%')
+        AND ${name} NOT LIKE '%Andretti%'
+        AND ${name} NOT LIKE '%Lemieux%';;
         label: "Mario"
       }
       when: {
@@ -676,7 +679,7 @@ view: games {
         label: "Fire Emblem"
       }
       when: {
-        sql: ${name} LIKE '%Sims%'
+        sql: ${name} LIKE '% Sims%'
         AND ${name} != 'My 3 Sims!'
         AND ${name} != 'SimSafari';;
         label: "The Sims"
@@ -734,7 +737,10 @@ view: games {
         label: "Street Fighter"
       }
       when: {
-        sql: ${name} LIKE '%Bonk%' ;;
+        sql: ${name} LIKE '%Bonk%'
+        AND ${name} != 'Bonka'
+        AND ${name} != 'Bonkheads'
+        AND ${name} NOT LIKE '%Bonkers%';;
         label: "Bonk"
       }
       when: {
@@ -783,15 +789,18 @@ view: games {
       }
 
       when: {
-        sql: ${name} LIKE '%Halo%';;
+        sql: ${name} LIKE 'Halo:%'
+        OR ${name} LIKE '%Halo 3%'
+        OR ${name} LIKE 'Halo %';;
         label: "Halo"
       }
       when: {
-        sql: ${name} LIKE '%Call of Duty%';;
+        sql: ${name} LIKE 'Call of Duty%';;
         label: "Call of Duty"
       }
       when: {
-        sql: ${name} LIKE '%Worms%';;
+        sql: ${name} LIKE '%Worms%'
+        AND ${name} NOT LIKE '%Jim%';;
         label: "Worms"
       }
       when: {
@@ -799,7 +808,7 @@ view: games {
         label: "Duke Nukem"
       }
       when: {
-        sql: ${name} LIKE '%Nathan%Drake%' OR ${name} LIKE '%Uncharted%';;
+        sql: ${name} LIKE '%Nathan%Drake%' OR ${name} LIKE 'Uncharted%:%';;
         label: "Uncharted"
       }
       when: {
@@ -811,7 +820,8 @@ view: games {
         label: "Phoenix Wright"
       }
       when: {
-        sql: ${name} LIKE '%Dragon%Quest%';;
+        sql: ${name} LIKE 'Dragon Quest%'
+        OR ${name} LIKE '%Dragon Warrior%';;
         label: "Dragon Quest"
       }
 
