@@ -525,6 +525,10 @@ view: games {
         label: "Rayman"
       }
       when: {
+        sql: ${name} LIKE '%Fire%Emblem%' ;;
+        label: "Marth"
+      }
+      when: {
         sql: ${name} LIKE '%Mario%' ;;
         label: "Mario"
       }
@@ -648,6 +652,14 @@ view: games {
         sql: ${name} LIKE '%Bomberman%' ;;
         label: "Bomberman"
       }
+      when: {
+        sql: ${name} LIKE '%fifa%' ;;
+        label: "Soccer"
+      }
+      when: {
+        sql: ${name} LIKE '%Sims%' ;;
+        label: "Sims"
+      }
     }
   }
 
@@ -658,6 +670,20 @@ view: games {
       when: {
         sql: ${name} LIKE '%Mario %' OR ${mascot} LIKE '%Luigi%' ;;
         label: "Mario"
+      }
+      when: {
+        sql: ${name} LIKE '%Fire%Emblem%' ;;
+        label: "Fire Emblem"
+      }
+      when: {
+        sql: ${name} LIKE '%Sims%'
+        AND ${name} != 'My 3 Sims!'
+        AND ${name} != 'SimSafari';;
+        label: "The Sims"
+      }
+      when: {
+        sql: ${name} LIKE '%fifa%' ;;
+        label: "FIFA Soccer"
       }
       when: {
         sql: ${name} LIKE '%Rayman%' ;;
@@ -788,6 +814,7 @@ view: games {
         sql: ${name} LIKE '%Dragon%Quest%';;
         label: "Dragon Quest"
       }
+
     }
   }
 
@@ -863,6 +890,12 @@ view: games {
     "https://s9.postimg.org/y2ttxfqj3/ezgif_2678558225.gif"
     {% elsif value == 'Rayman' %}
     "http://i.giphy.com/bDUfHeBl80tLa.gif"
+    {% elsif value == 'Soccer' %}
+    "http://i.giphy.com/qBYY1bBX10Y6I.gif"
+    {% elsif value == 'Sims' %}
+    "http://www.picgifs.com/games-gifs/games-gifs/de-sims/picgifs-de-sims-8212374.gif"
+    {% elsif value == 'Marth' %}
+    "https://s22.postimg.org/ibpcuksfl/ezgif_3511318288.gif"
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
@@ -944,6 +977,12 @@ view: games {
     "https://s9.postimg.org/y2ttxfqj3/ezgif_2678558225.gif"
     {% elsif value == 'Rayman' %}
     "http://i.giphy.com/bDUfHeBl80tLa.gif"
+    {% elsif value == 'Soccer' %}
+    "http://i.giphy.com/qBYY1bBX10Y6I.gif"
+    {% elsif value == 'Sims' %}
+    "http://www.picgifs.com/games-gifs/games-gifs/de-sims/picgifs-de-sims-8212374.gif"
+    {% elsif value == 'Marth' %}
+    "https://s22.postimg.org/ibpcuksfl/ezgif_3511318288.gif"
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
@@ -1023,6 +1062,12 @@ view: games {
     "https://s9.postimg.org/y2ttxfqj3/ezgif_2678558225.gif"
     {% elsif value == 'Rayman' %}
     "http://i.giphy.com/bDUfHeBl80tLa.gif"
+    {% elsif value == 'Soccer' %}
+    "https://s22.postimg.org/dzxocimpd/Capture.png"
+    {% elsif value == 'Sims' %}
+    "https://s9.postimg.org/sewrll0lb/The_Sims_Logo_1.png"
+    {% elsif value == 'Marth' %}
+    "https://upload.wikimedia.org/wikipedia/en/5/5a/MarthFE3DS.png"
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
