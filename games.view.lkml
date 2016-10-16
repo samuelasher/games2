@@ -1032,5 +1032,9 @@ view: games {
     drill_fields: [console, name]
     sql:  ${console} ;;
   }
+  measure: earliest_year {
+    type: min
+    sql: ${year}  ;;
+  }
 
 }
