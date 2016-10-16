@@ -788,7 +788,6 @@ view: games {
     html:
 
     <div style="width: 80px; text-align: center; margin: auto">
-    <a href="{{mascot}}" target="_self">
     <img src=
     {% if value == 'Cactuar' %}
     "https://s11.postimg.org/7s4y777pv/ezgif_1339250537.gif"
@@ -821,13 +820,13 @@ view: games {
     {% elsif value == 'Bomberman' %}
     "https://s18.postimg.org/gl37if915/ezgif_842190678.gif"
     {% elsif value == 'Donkey Kong' %}
-    "http://i.giphy.com/8zjsQY3eS2WIw.gif"
+    "https://s13.postimg.org/x9jnlx73r/ezgif_2082221191.gif"
     {% elsif value == 'Link' %}
     "https://s9.postimg.org/9nwg7eqsf/ezgif_3980330143.gif"
     {% elsif value == 'Kirby' %}
     "http://i.giphy.com/wRmOK4J2261gI.gif"
     {% elsif value == 'Dracula' %}
-    "https://s15.postimg.org/3su4bhmob/ezgif_1970490436.gif"
+    "https://s21.postimg.org/vtxv2gcd3/ezgif_1316443048.gif"
     {% elsif value == 'Bonk' %}
     "https://s17.postimg.org/ln3t7dmpr/ezgif_4114690391.gif"
     {% elsif value == 'Solid Snake' %}
@@ -841,7 +840,7 @@ view: games {
     {% elsif value == 'Samus' %}
     "https://s18.postimg.org/ldyxvp9qx/ezgif_3754811271.gif"
     {% elsif value == 'Nathan Drake' %}
-    "http://i.giphy.com/WjchWfOoa4RUs.gif"
+    "https://s14.postimg.org/jytneojc1/ezgif_3936007060.gif"
     {% elsif value == 'Ratchet & Clank' %}
     "https://s12.postimg.org/3psvj9c99/ezgif_2117624514.gif"
     {% elsif value == 'Phoenix Wright' %}
@@ -860,7 +859,7 @@ view: games {
     alt="{{series}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
     </br>{{ series }}
     </div>
-    </a> ;;
+     ;;
   }
 
   measure: count {
