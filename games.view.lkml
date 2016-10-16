@@ -656,7 +656,7 @@ view: games {
     alpha_sort: yes
     case: {
       when: {
-        sql: ${name} LIKE '%Mario%' OR ${mascot} LIKE '%Luigi%' ;;
+        sql: ${name} LIKE '%Mario %' OR ${mascot} LIKE '%Luigi%' ;;
         label: "Mario"
       }
       when: {
@@ -664,7 +664,15 @@ view: games {
         label: "Rayman"
       }
       when: {
-        sql: ${name} LIKE '%Sonic%' ;;
+        sql: ${name} LIKE '%Sonic %'
+        AND ${name} != 'Sonic Spike'
+        AND ${name} != 'Sonic Boom'
+        AND ${name} != 'Sonic Eraser'
+        AND ${name} != 'Sonic Invaders'
+        AND ${name} NOT LIKE '%Sonic Princess%'
+        AND ${name} NOT LIKE '%Sonic Wings%'
+        AND ${name} NOT LIKE '%Supersonic%'
+        AND ${name} NOT LIKE 'Sonic Blast Man%';;
         label: "Sonic the Hedgehog"
       }
       when: {
