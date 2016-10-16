@@ -1009,69 +1009,67 @@ view: games {
     <div style="width: 300px; text-align: center; margin: auto">
     <img src=
     {% if value == 'Cactuar' %}
-    "https://s11.postimg.org/7s4y777pv/ezgif_1339250537.gif"
+    "https://s15.postimg.org/kos50e2ij/moogle.png"
     {% elsif value == 'Sonic the Hedgehog' %}
-    "https://s12.postimg.org/imkt6r1zh/ezgif_2133819447.gif"
+    "https://s22.postimg.org/hs15lwnn5/sonic.png"
     {% elsif value == 'Mario' %}
-    "https://s22.postimg.org/tqon0ma01/ezgif_3681071909.gif"
+    "https://s13.postimg.org/hvp50hxxj/mario.png"
     {% elsif value == 'Mega Man' %}
-    "http://i.giphy.com/PK55P6udUmSPu.gif"
+    "https://s13.postimg.org/lmm7yxwl3/megaman.png"
     {% elsif value == 'Captain Price' %}
-    "http://i.giphy.com/T8rtfi2iK00IU.gif"
+    "https://s11.postimg.org/w1nsu01rn/price.png"
     {% elsif value == 'Pac-Man' %}
-    "https://s16.postimg.org/gfknpifs5/ezgif_2576536318.gif"
+    "https://s13.postimg.org/qn7nhb5dz/pacman.png"
     {% elsif value == 'John Madden' %}
-    "http://i.giphy.com/kNdjr0nRPHxTO.gif"
+    "https://s21.postimg.org/pzyg588ef/madden.png"
     {% elsif value == 'Ryu' %}
-    "https://s11.postimg.org/48fhy987n/ezgif_3577204249.gif"
+    "https://s12.postimg.org/db1t96nbh/ryu.png"
     {% elsif value == 'Lara Croft' %}
-    "http://i.giphy.com/WkuLHM3uGHSAE.gif"
+    "https://s22.postimg.org/jsdn4as41/laracroft.png"
     {% elsif value == 'Tetris' %}
-    "https://s13.postimg.org/ceh4m2ijr/ezgif_1011869008.gif"
+    "https://s22.postimg.org/iuvyui1w1/tetris.png"
     {% elsif value == 'Pikachu' %}
-    "http://i.giphy.com/qcx4hzsY8n6FO.gif"
+    "https://s17.postimg.org/v3fpggksv/pikachu.png"
     {% elsif value == 'Worms' %}
-    "http://i.giphy.com/j0tASyEf9wH6M.gif"
+    "https://s14.postimg.org/7lmygy80x/worms.png"
     {% elsif value == 'Resident Evil' %}
-    "http://i.giphy.com/hji6ZMztu4unm.gif"
+    "https://s11.postimg.org/4rtoihl7n/residentevil.png"
     {% elsif value == 'Sub Zero' %}
-    "http://i.giphy.com/72v5BY3vFkSCA.gif"
+    "https://s17.postimg.org/gvl303cm7/subzero.png"
     {% elsif value == 'Bomberman' %}
-    "https://s18.postimg.org/gl37if915/ezgif_842190678.gif"
+    "https://s10.postimg.org/ytbsr5ka1/bomberman.png"
     {% elsif value == 'Donkey Kong' %}
-    "https://s13.postimg.org/x9jnlx73r/ezgif_2082221191.gif"
+    "https://s13.postimg.org/bgav7lno7/image.png"
     {% elsif value == 'Link' %}
-    "https://s9.postimg.org/9nwg7eqsf/ezgif_3980330143.gif"
+    "https://s21.postimg.org/ni22dixav/link.jpg"
     {% elsif value == 'Kirby' %}
-    "http://i.giphy.com/wRmOK4J2261gI.gif"
+    "https://s18.postimg.org/u88krhegp/kirby.png"
     {% elsif value == 'Dracula' %}
-    "https://s21.postimg.org/vtxv2gcd3/ezgif_1316443048.gif"
+    "https://s21.postimg.org/69vo7ginb/dracula.png"
     {% elsif value == 'Bonk' %}
-    "https://s17.postimg.org/ln3t7dmpr/ezgif_4114690391.gif"
+    "https://s16.postimg.org/yf5lmgjwl/bonk.png"
     {% elsif value == 'Solid Snake' %}
-    "https://s21.postimg.org/r9iqv9giv/ezgif_1075249640.gif"
+    "https://s21.postimg.org/xtz1qmg7b/snake.png"
     {% elsif value == 'Duke Nukem' %}
-    "http://i.giphy.com/PFDKWUsh5auQg.gif"
+    "https://s9.postimg.org/li1y3relb/dukenukem.png"
     {% elsif value == 'Master Chief' %}
-    "http://i.giphy.com/RzYrhuxnoe91K.gif"
+    "https://s9.postimg.org/dcfxqgm3z/masterchief.png"
     {% elsif value == 'Crash Bandicoot' %}
-    "https://s18.postimg.org/nu0r9jrtl/ezgif_2055134094.gif"
+    "https://s22.postimg.org/rq0ixiy1d/crash.png"
     {% elsif value == 'Samus' %}
-    "https://s18.postimg.org/ldyxvp9qx/ezgif_3754811271.gif"
+    "https://s16.postimg.org/x68atd2ut/samus.png"
     {% elsif value == 'Nathan Drake' %}
-    "https://s14.postimg.org/jytneojc1/ezgif_3936007060.gif"
+    "https://s10.postimg.org/xrb4kqld5/nathan.png"
     {% elsif value == 'Ratchet & Clank' %}
-    "https://s12.postimg.org/3psvj9c99/ezgif_2117624514.gif"
+    "https://s4.postimg.org/4t83l3oxp/ratchet.png"
     {% elsif value == 'Phoenix Wright' %}
-    "http://i.giphy.com/eXgOq9ZqvcHu.gif"
-    {% elsif value == 'Luigi' %}
-    "http://i.giphy.com/pbamSoMhpbL0I.gif"
+    "https://s10.postimg.org/gl8b3brux/phoenix.png"
     {% elsif value == 'Professor Layton' %}
-    "https://s11.postimg.org/ubdtxjloz/ezgif_2375709908.gif"
+    "https://s11.postimg.org/fr89ud6hf/Screen_Shot_2016_10_16_at_11_59_52_AM.png"
     {% elsif value == 'Slime' %}
-    "https://s9.postimg.org/y2ttxfqj3/ezgif_2678558225.gif"
+    "https://s11.postimg.org/bmfibvf6b/slime.png"
     {% elsif value == 'Rayman' %}
-    "http://i.giphy.com/bDUfHeBl80tLa.gif"
+    "https://s15.postimg.org/5cxue1023/Rayman_1200.jpg"
     {% elsif value == 'Soccer' %}
     "https://s22.postimg.org/dzxocimpd/Capture.png"
     {% elsif value == 'Sims' %}
@@ -1079,7 +1077,7 @@ view: games {
     {% elsif value == 'Marth' %}
     "https://upload.wikimedia.org/wikipedia/en/5/5a/MarthFE3DS.png"
     {% else %}
-    "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
+    "https://s13.postimg.org/e3ff0b9p3/1264189_lilo_and_stitch.jpg"
     {% endif %}
     alt="{{series}}" style="height: 300px; width: 300px; border-radius: 20px; margin-bottom: 5px;" />
     </div>
