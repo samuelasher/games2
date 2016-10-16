@@ -787,11 +787,11 @@ view: games {
     sql: ${mascot};;
     html:
 
-    <div style="width: 65px; text-align: center; margin: auto">
+    <div style="width: 80px; text-align: center; margin: auto">
     <a href="{{mascot}}" target="_self">
     <img src=
     {% if value == 'Cactuar' %}
-    "http://i.giphy.com/JmcPYoQJ1vugM.gif"
+    "https://s11.postimg.org/7s4y777pv/ezgif_1339250537.gif"
     {% elsif value == 'Sonic the Hedgehog' %}
     "http://i.giphy.com/13nN1XlbXhqqTC.gif"
     {% elsif value == 'Mario' %}
@@ -805,7 +805,7 @@ view: games {
     {% elsif value == 'John Madden' %}
     "http://i.giphy.com/kNdjr0nRPHxTO.gif"
     {% elsif value == 'Ryu' %}
-    "http://i.giphy.com/HCrOYRonZVwVa.gif"
+    "https://s11.postimg.org/48fhy987n/ezgif_3577204249.gif"
     {% elsif value == 'Lara Croft' %}
     "http://i.giphy.com/WkuLHM3uGHSAE.gif"
     {% elsif value == 'Tetris' %}
@@ -857,7 +857,7 @@ view: games {
     {% else %}
     "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
     {% endif %}
-    alt="{{series}}" style="height: 50px; width: 50px; border-radius: 25px; margin-bottom: 5px;" />
+    alt="{{series}}" style="height: 75px; width: 75px; border-radius: 15px; margin-bottom: 5px;" />
     </br>{{ series }}
     </div>
     </a> ;;
@@ -866,6 +866,11 @@ view: games {
   measure: count {
     type: count
     drill_fields: [console, name]
+  }
+  measure: count_consoles {
+    type: count_distinct
+    drill_fields: [console, name]
+    sql:  ${console} ;;
   }
 
 }
