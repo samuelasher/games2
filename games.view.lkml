@@ -1,11 +1,21 @@
 view: games {
+  
+  
+  filter: parameter_passer {
+    default_value: "%"
+    }
   dimension: id {
     primary_key: yes
     type: number
     hidden: yes
     sql: ${TABLE}.id ;;
   }
-
+  
+  dimension: parameter_taker {
+    html: {% parameter parameter_passer %} ;;
+    sql: 1;;
+  }
+  
   dimension: company {
     type: string
     sql: ${TABLE}.company ;;
@@ -519,6 +529,7 @@ view: games {
   dimension: mascot {
     type: string
     alpha_sort: yes
+    hidden:  yes
     case: {
       when: {
         sql: ${name} LIKE '%Rayman%' ;;
@@ -660,6 +671,7 @@ view: games {
         sql: ${name} LIKE '%Sims%' ;;
         label: "Sims"
       }
+      else: "Other"
     }
   }
 
@@ -824,10 +836,18 @@ view: games {
         OR ${name} LIKE '%Dragon Warrior%';;
         label: "Dragon Quest"
       }
-
+      else: "Other"
     }
   }
 
+  dimension: api_test {
+      group_label: "Images"
+      sql: '1';;
+      html:  
+       <div> {% parameter parameter_passer %} </div>
+       <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q=mario"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+ ;;
+    }
   dimension: mascot_gif {
     label: "GIF icon with Title"
     group_label: "Images"
@@ -1079,7 +1099,7 @@ view: games {
     {% else %}
     "https://s13.postimg.org/e3ff0b9p3/1264189_lilo_and_stitch.jpg"
     {% endif %}
-    alt="{{series}}" style="height: 300px; width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+    alt="{{series}}" style=" max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
     </div>
      ;;
   }
@@ -1091,16 +1111,15 @@ view: games {
 
   measure: count {
     type: count
-    drill_fields: [console, name]
+    drill_fields: [console, name, year]
   }
   measure: count_consoles {
     type: count_distinct
-    drill_fields: [console, name]
+    drill_fields: [console, name, year]
     sql:  ${console} ;;
   }
   measure: earliest_year {
     type: min
     sql: ${year}  ;;
   }
-
 }
