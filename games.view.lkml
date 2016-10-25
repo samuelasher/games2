@@ -1,6 +1,6 @@
 view: games {
-  
-  
+
+
   filter: parameter_passer {
     default_value: "%"
     }
@@ -10,12 +10,11 @@ view: games {
     hidden: yes
     sql: ${TABLE}.id ;;
   }
-  
+
   dimension: parameter_taker {
-    html: {% parameter parameter_passer %} ;;
-    sql: 1;;
+      sql: {%parameter parameter_passer%};;
   }
-  
+
   dimension: company {
     type: string
     sql: ${TABLE}.company ;;
@@ -29,6 +28,12 @@ view: games {
       url: "/explore/games/games?fields=games.year,games.name&f[games.console]={{ value | url_encode }}&show=data"
       label: "Games of this Console"
     }
+  }
+  dimension: console_picture {
+    group_label: "Images"
+    sql: ${console} ;;
+    html: <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25video%25game%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+    ;;
   }
 
   dimension: console_bucketed {
@@ -843,8 +848,8 @@ view: games {
   dimension: api_test {
       group_label: "Images"
       sql: '1';;
-      html:  
-       <div> {% parameter parameter_passer %} </div>
+      html:
+       <div> </div>
        <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q=mario"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
  ;;
     }
@@ -1023,7 +1028,8 @@ view: games {
   dimension: mascot_image {
     label: "Large Image"
     group_label: "Images"
-    sql: ${mascot};;
+    sql: CASE WHEN ${mascot} != 'other' THEN ${mascot}
+          ELSE ${parameter_taker} END;;
     html:
 
     <div style="width: 300px; text-align: center; margin: auto">
@@ -1097,7 +1103,7 @@ view: games {
     {% elsif value == 'Marth' %}
     "https://upload.wikimedia.org/wikipedia/en/5/5a/MarthFE3DS.png"
     {% else %}
-    "https://s13.postimg.org/e3ff0b9p3/1264189_lilo_and_stitch.jpg"
+    "http://pokemon-master-trainer.herokuapp.com/api.php?q={{value}}"
     {% endif %}
     alt="{{series}}" style=" max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
     </div>
@@ -1115,7 +1121,7 @@ view: games {
   }
   measure: count_consoles {
     type: count_distinct
-    drill_fields: [console, name, year]
+    drill_fields: [console]
     sql:  ${console} ;;
   }
   measure: earliest_year {
