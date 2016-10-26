@@ -933,7 +933,7 @@ view: games {
 
             <div style="width: 80px; text-align: center; margin: auto">
             <img src=
-    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game%25animated%25gif"
+    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
     {% else %} "{{value}}"
     {% endif %}
             alt="{{series}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
@@ -950,7 +950,7 @@ view: games {
 
             <div style="width: 200px; text-align: center; margin: auto">
             <img src=
-    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game%25animated%25gif"
+    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
     {% else %} "{{value}}"
     {% endif %}
             alt="{{series}}" style="height: 200px; width: 200px; border-radius: 20px; margin-bottom: 5px;" />
@@ -964,7 +964,7 @@ view: games {
     html:
             <div style="width: 300px; text-align: center; margin: auto">
             <img src=
-            {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game"
+            {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game"
             {% else %} "{{value}}"
             {% endif %}
 
