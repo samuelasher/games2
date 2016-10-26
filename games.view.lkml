@@ -702,7 +702,7 @@ view: games {
     sql: '1';;
     html:
        <div> </div>
-       <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q=mario"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+       <img src="https://pokemon-master-trainer.herokuapp.com/api.php?q=mario"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
  ;;
   }
 
@@ -920,7 +920,7 @@ view: games {
       } when: { sql: ${series} = 'Fire Emblem' ;; label:
         "https://upload.wikimedia.org/wikipedia/en/5/5a/MarthFE3DS.png"
       }
-      else: "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
+      else: "http://pokemon-master-trainer.herokuapp.com/api.php?q="
 
     }
   }
@@ -956,7 +956,11 @@ view: games {
     sql: ${image_url};;
     html:
             <div style="width: 300px; text-align: center; margin: auto">
-            <img src="{{value}}"
+            <img src=
+            {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game"
+            {% else %} "{{value}}"
+            {% endif %}
+
             alt="{{series}}" style=" max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
             </div>
              ;;
