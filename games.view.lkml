@@ -1,9 +1,6 @@
 view: games {
 
 
-  filter: parameter_passer {
-    default_value: "%"
-  }
   dimension: id {
     primary_key: yes
     type: number
@@ -12,6 +9,7 @@ view: games {
   }
 
   dimension: parameter_taker {
+    hidden: yes
     sql: {%parameter name%};;
   }
 
@@ -33,6 +31,13 @@ view: games {
     group_label: "Images"
     sql: ${console} ;;
     html: <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25video%25game%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+      ;;
+  }
+
+  dimension: console_company_picture {
+    group_label: "Images"
+    sql: ${console_company} ;;
+    html: <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25logo"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
       ;;
   }
 
@@ -697,16 +702,8 @@ view: games {
     }
   }
 
-  dimension: api_test {
-    group_label: "Images"
-    sql: '1';;
-    html:
-       <div> </div>
-       <img src="https://pokemon-master-trainer.herokuapp.com/api.php?q=mario"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
- ;;
-  }
-
   dimension: gif_url {
+    hidden: yes
     case: {
       when: {
         sql: ${series} = 'Final Fantasy';;
@@ -850,6 +847,7 @@ view: games {
     }
   }
   dimension: image_url {
+    hidden: yes
     case: {
       when: { sql: ${series} = 'Final Fantasy';;  label:
         "https://s15.postimg.org/kos50e2ij/moogle.png"
@@ -928,6 +926,7 @@ view: games {
   dimension: mascot_gif {
     label: "GIF icon with Title"
     group_label: "Images"
+    required_fields: [parameter_taker]
     sql: ${gif_url};;
     html:
 
@@ -945,6 +944,7 @@ view: games {
   dimension: mascot_gif_large {
     label: "Animated GIF"
     group_label: "Images"
+    required_fields: [parameter_taker]
     sql: ${gif_url};;
     html:
 
@@ -960,6 +960,7 @@ view: games {
   dimension: mascot_image {
     label: "Large Image"
     group_label: "Images"
+    required_fields: [parameter_taker]
     sql: ${image_url};;
     html:
             <div style="width: 300px; text-align: center; margin: auto">
