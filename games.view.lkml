@@ -845,7 +845,8 @@ view: games {
         sql: ${series} = 'Fire Emblem';;
         label: "https://s22.postimg.org/ibpcuksfl/ezgif_3511318288.gif"
       }
-      else: "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
+      #else: "https://jimpix.co.uk/ink/ecards/angif_pinkevich_catphones.gif"
+      else: "http://pokemon-master-trainer.herokuapp.com/api.php?q="
     }
   }
   dimension: image_url {
@@ -931,7 +932,10 @@ view: games {
     html:
 
             <div style="width: 80px; text-align: center; margin: auto">
-            <img src="{{value}}"
+            <img src=
+    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game%25animated%25gif"
+    {% else %} "{{value}}"
+    {% endif %}
             alt="{{series}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
             </br>{{ series }}
             </div>
@@ -945,7 +949,10 @@ view: games {
     html:
 
             <div style="width: 200px; text-align: center; margin: auto">
-            <img src="{{value}}"
+            <img src=
+    {% if value == 'http://pokemon-master-trainer.herokuapp.com/api.php?q=' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | url_param_escape }}%25video%25game%25animated%25gif"
+    {% else %} "{{value}}"
+    {% endif %}
             alt="{{series}}" style="height: 200px; width: 200px; border-radius: 20px; margin-bottom: 5px;" />
             </div>
              ;;
