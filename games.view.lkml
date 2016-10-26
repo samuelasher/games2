@@ -991,4 +991,9 @@ view: games {
     type: min
     sql: ${year}  ;;
   }
+  measure: latest_year {
+    type: max
+    sql: ${year}  ;;
+  }
+
 }
