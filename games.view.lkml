@@ -12,7 +12,7 @@ view: games {
   }
 
   dimension: parameter_taker {
-    sql: {%parameter parameter_passer%};;
+    sql: {%parameter name%};;
   }
 
   dimension: company {
@@ -985,15 +985,15 @@ view: games {
   measure: count_consoles {
     type: count_distinct
     drill_fields: [console]
-    sql:  ${console} ;;
+    sql: ${console} ;;
   }
   measure: earliest_year {
     type: min
-    sql: ${year}  ;;
+    sql:  ${year}  ;;
   }
   measure: latest_year {
     type: max
-    sql: ${year}  ;;
+    sql:  ${year}  ;;
   }
 
 }
