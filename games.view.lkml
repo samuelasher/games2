@@ -30,14 +30,14 @@ view: games {
   dimension: console_picture {
     group_label: "Images"
     sql: ${console} ;;
-    html: <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25video%25game%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+    html: <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
       ;;
   }
   dimension: console_image_with_title {
     group_label: "Images"
     sql:  ${console} ;;
     html: <div style="width: 100px; text-align: center; margin: auto">
-    <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25video%25game%25console"
+    <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
 
     alt="{{value}}" style="max-height: 100px; width: 100px; border-radius: 8px; margin-bottom: 5px;" />
     </br>{{ value }}
@@ -202,7 +202,7 @@ view: games {
     type: string
     alpha_sort: yes
     drill_fields: [platform, console_bucketed, company, name, series, year]
-
+    label: "Console Manufacturer"
     case: {
       when: {
         sql: ${console} LIKE '%Nintendo%'
