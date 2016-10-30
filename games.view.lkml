@@ -1,5 +1,6 @@
 view: games {
-
+# Want to remove platform, console company,
+# and remove the sql necessary in name, console
 
   dimension: id {
     primary_key: yes
@@ -26,6 +27,10 @@ view: games {
       url: "/explore/games/games?fields=games.year,games.name&f[games.console]={{ value | url_encode }}&show=data"
       label: "Games of this Console"
     }
+    link: {
+      label: "Console Lookup Dashboard"
+      url: "/dashboards/3?Platform%20Type={{platform | url_encode}}&Console%20Name={{ value | url_encode }}"
+    }
   }
   dimension: console_picture {
     group_label: "Images"
@@ -38,8 +43,7 @@ view: games {
     sql:  ${console} ;;
     html: <div style="width: 100px; text-align: center; margin: auto">
     <img src="http://pokemon-master-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
-
-    alt="{{value}}" style="max-height: 100px; width: 100px; border-radius: 8px; margin-bottom: 5px;" />
+    alt="{{value}}" style="height: 100px; width: 100px; border-radius: 8px; margin-bottom: 5px;" />
     </br>{{ value }}
     </div>
     ;;
@@ -611,11 +615,6 @@ view: games {
         sql: ${name} LIKE '%Ace%Attorney%';;
         label: "Phoenix Wright"
       }
-      when: {
-        sql: ${name} LIKE 'Dragon Quest%'
-          OR ${name} LIKE '%Dragon Warrior%';;
-        label: "Dragon Quest"
-      }
       else: "Other"
     }
   }
@@ -626,12 +625,10 @@ view: games {
     #required_fields: [parameter_taker]
     sql: ${series};;
     html:
-
             <div style="width: 80px; text-align: center; margin: auto">
             <img src=
     {% if value == 'Other' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
     {% else %}  "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game%25animated%25gif"
-
     {% endif %}
             alt="{{value}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
             </br>{{ value }}
@@ -645,7 +642,6 @@ view: games {
     #required_fields: [parameter_taker]
     sql: ${series};;
     html:
-
             <div style="width: 200px; text-align: center; margin: auto">
             <img src=
        {% if value == 'Other' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
@@ -665,9 +661,7 @@ view: games {
             <img src=
             {% if value == 'Other' %} "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game"
     {% else %}  "https://pokemon-master-trainer.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game"
-
             {% endif %}
-
             alt="{{value}}" style=" max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
             </div>
              ;;
