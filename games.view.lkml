@@ -21,7 +21,6 @@ view: games {
 
   dimension: console {
     type: string
-    label: "Unbucketed Console"
     hidden: no
     sql: TRIM(Replace(Replace(Replace(${TABLE}.console,'\t',''),'\n',''),'\r','')) ;;
     link: {
@@ -58,7 +57,8 @@ view: games {
   }
 
   dimension: console_bucketed {
-    label: "Console"
+    label: "Console Bucketed"
+    description: "All computer games are bucketed together when you use this dimension"
     drill_fields: [company, name, series, year]
     type: string
     sql: CASE WHEN ${platform} = 'Computer' THEN 'Computer'

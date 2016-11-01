@@ -5,6 +5,7 @@ view: consoles {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    hidden: yes
   }
 
   dimension: developer {
