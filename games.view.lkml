@@ -36,14 +36,14 @@ view: games {
 #   dimension: console_picture {
 #     group_label: "Images"
 #     sql: ${console} ;;
-#     html: <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+#     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
 #       ;;
 #   }
 #   dimension: console_image_with_title {
 #     group_label: "Images"
 #     sql:  ${console} ;;
 #     html: <div style="width: 100px; text-align: center; margin: auto">
-#     <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
+#     <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
 #     alt="{{value}}" style="height: 100px; width: 100px; border-radius: 8px; margin-bottom: 5px;" />
 #     </br>{{ value }}
 #     </div>
@@ -53,7 +53,7 @@ view: games {
 #   dimension: console_company_picture {
 #     group_label: "Images"
 #     sql: ${console_company} ;;
-#     html: <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25logo"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+#     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25logo"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
 #       ;;
 #   }
 #
@@ -629,8 +629,8 @@ view: games {
     html:
             <div style="width: 80px; text-align: center; margin: auto">
             <img src=
-    {% if value == 'Other' %} "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
-    {% else %}  "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game%25animated%25gif"
+    {% if value == 'Other' %} "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
+    {% else %}  "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game%25animated%25gif"
     {% endif %}
             alt="{{value}}" style="height: 75px; width: 75px; border-radius: 8px; margin-bottom: 5px;" />
             </br>{{ value }}
@@ -646,8 +646,8 @@ view: games {
     html:
             <div style="width: 200px; text-align: center; margin: auto">
             <img src=
-       {% if value == 'Other' %} "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
-{% else %}  "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game%25animated%25gif"
+       {% if value == 'Other' %} "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game%25animated%25gif"
+{% else %}  "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game%25animated%25gif"
 {% endif %}
             alt="{{value}}" style="height: 200px; width: 200px; border-radius: 20px; margin-bottom: 5px;" />
             </div>
@@ -661,8 +661,8 @@ view: games {
     html:
             <div style="width: 300px; text-align: center; margin: auto">
             <img src=
-            {% if value == 'Other' %} "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game"
-    {% else %}  "https://pokemon-ace-trainer.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game"
+            {% if value == 'Other' %} "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ parameter_taker | replace: '%', ' ' | url_param_escape }}%25video%25game"
+    {% else %}  "https://feeling-lucky-looker.herokuapp.com/api.php?q={{ value | url_param_escape }}%25video%25game"
             {% endif %}
             alt="{{value}}" style=" max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
             </div>

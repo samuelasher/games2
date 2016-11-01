@@ -37,7 +37,7 @@ view: consoles {
   dimension: console_image {
      group_label: "Images"
      sql: ${name} ;;
-     html: <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
       ;;
    }
 
@@ -45,7 +45,7 @@ view: consoles {
      group_label: "Images"
      sql:  ${name} ;;
      html: <div style="width: 100px; text-align: center; margin: auto">
-     <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
+     <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"
      alt="{{value}}" style="height: 100px; width: 100px; border-radius: 8px; margin-bottom: 5px;" />
      </br>{{ value }}
      </div>
@@ -55,7 +55,7 @@ view: consoles {
    dimension: manufacturer_picture {
      group_label: "Images"
      sql: ${manufacturer} ;;
-     html: <img src="http://pokemon-ace-trainer.herokuapp.com/api.php?q={{value | url_param_escape }}%25logo"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25logo"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
        ;;   }
 
   dimension: name_bucketed {
