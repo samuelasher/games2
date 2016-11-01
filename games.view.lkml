@@ -32,7 +32,7 @@ view: games {
       url: "/dashboards/3?Platform%20Type={{platform | url_encode}}&Console%20Name={{ value | url_encode }}"
     }
   }
-#
+
 #   dimension: console_picture {
 #     group_label: "Images"
 #     sql: ${console} ;;
@@ -527,7 +527,7 @@ view: games {
 #       else: "Other"
 #     }
 #   }
-#
+
   dimension: name {
     type: string
     sql: REPLACE(${TABLE}.name,'Pok?', 'Poké') ;;
@@ -553,7 +553,7 @@ view: games {
 #     WHEN ${company} LIKE '%Activision%' THEN 'Activision'
 #             ELSE ${company} END;;
 #   }
-#
+
   dimension: series {
     type: string
     alpha_sort: yes
@@ -671,7 +671,7 @@ view: games {
   dimension:  is_virtual_console {
     type: yesno
     hidden: yes
-    sql: (${console} = 'Wii' AND ${year} < 2006) OR (${console} = 'Nintendo 3DS' AND ${year} < 2011) ;;
+    sql: ${year} < ${consoles.release_year} ;;
   }
 
   measure: count {
@@ -682,6 +682,12 @@ view: games {
     type: count_distinct
     drill_fields: [console]
     sql: ${console} ;;
+  }
+
+  measure: count_companies {
+    type: count_distinct
+    drill_fields: [company]
+    sql: ${company} ;;
   }
   measure: earliest_year {
     type: min
