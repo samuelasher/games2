@@ -27,10 +27,6 @@ view: games {
       url: "/explore/games/games?fields=games.year,games.name&f[games.console]={{ value | url_encode }}&show=data"
       label: "Games of this Console"
     }
-    link: {
-      label: "Console Lookup Dashboard"
-      url: "/dashboards/3?Platform%20Type={{platform | url_encode}}&Console%20Name={{ value | url_encode }}"
-    }
   }
 
 #   dimension: console_picture {
