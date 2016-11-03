@@ -37,7 +37,7 @@ view: consoles {
   dimension: console_image {
      group_label: "Images"
      sql: ${name} ;;
-     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25game%25system"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
+     html: <img src="http://feeling-lucky-looker.herokuapp.com/api.php?q={{value | url_param_escape }}%25console"  style="max-height: 300px; max-width: 300px; border-radius: 20px; margin-bottom: 5px;" />
       ;;
    }
 
