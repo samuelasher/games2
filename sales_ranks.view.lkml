@@ -16,5 +16,6 @@ view: sales_ranks {
   dimension: rank {
     primary_key: yes
     type: number
+    html: <p style="font-size:30px; text-align:center"> {{value}} </p> ;;
   }
 }

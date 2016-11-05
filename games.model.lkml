@@ -21,7 +21,28 @@ explore: games {
       AND ${games.name} = ${sales_by_game.name};;
   }
 }
-explore: consoles {}
+explore: consoles {
+  join: sales_ranks {
+    sql_on: ${sales_ranks.platform} = ${consoles.name} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_eu {
+    sql_on: ${sales_ranks_eu.platform} = ${consoles.name} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_jp {
+    sql_on: ${sales_ranks_jp.platform} = ${consoles.name} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_na {
+    sql_on: ${sales_ranks_na.platform} = ${consoles.name} ;;
+    relationship: one_to_one
+    type: inner
+  }
+}
 explore: sales {  join: consoles {
     relationship: many_to_one
     sql_on: ${sales.console} = ${consoles.name} ;;
