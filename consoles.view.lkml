@@ -59,7 +59,6 @@ view: consoles {
        ;;   }
 
   dimension: name_bucketed {
-     label: "Console Bucketed"
      description: "All computer games are bucketed together when you use this dimension"
      drill_fields: [manufacturer, name, platform, release_year]
      type: string
@@ -69,6 +68,6 @@ view: consoles {
 
   measure: count {
     type: count
-    drill_fields: [id, name]
+    drill_fields: [name, manufacturer, platform, release_year  ]
   }
 }

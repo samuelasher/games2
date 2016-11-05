@@ -22,4 +22,26 @@ explore: games {
   }
 }
 explore: consoles {}
-explore: sales {}
+explore: sales {  join: consoles {
+    relationship: many_to_one
+    sql_on: ${sales.console} = ${consoles.name} ;;
+    type: left_outer
+  }}
+
+explore: sales_ranks {
+  join: sales_ranks_eu {
+    sql_on: ${sales_ranks_eu.rank} = ${sales_ranks.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_jp {
+    sql_on: ${sales_ranks_jp.rank} = ${sales_ranks.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_na {
+    sql_on: ${sales_ranks_na.rank} = ${sales_ranks.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+}
