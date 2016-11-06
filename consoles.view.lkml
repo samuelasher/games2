@@ -22,6 +22,10 @@ view: consoles {
   dimension: name {
     type: string
     sql: ${TABLE}.name ;;
+    link: {
+      url: "/dashboards/3?Console%20Name={{ value | url_encode }}"
+      label: "Console Lookup Dashboard"
+    }
   }
 
   dimension: platform {

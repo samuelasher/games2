@@ -11,7 +11,7 @@ view: sales_ranks {
   }
 
   dimension: platform {
-    html: <p style="font-size:23px"> {{value}} </p> ;;
+ #   html: <p style="font-size:16px"> <a href="/dashboards/3?Console%20Name={{ value | url_encode }}"> {{value}} </a> </p> ;;
   }
   dimension: rank {
     primary_key: yes

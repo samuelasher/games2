@@ -4,7 +4,7 @@ view: sales {
   dimension: id {
     primary_key: yes
     type: number
-    hidden: yes
+#    hidden: yes
     sql: ${TABLE}.id ;;
   }
 
@@ -51,6 +51,10 @@ view: sales {
   dimension: console {
     type: string
     sql: ${TABLE}.platform ;;
+    link: {
+      url: "/dashboards/3?Console%20Name={{ value | url_encode }}"
+      label: "Console Lookup Dashboard"
+    }
   }
 
   dimension: console_manufacturer {

@@ -1,7 +1,7 @@
 connection: "video_games"
 include: "*.view.lkml"
 include: "*.dashboard.lkml"
-#persist_for: "99999 hours"
+persist_for: "99999 hours"
 explore: games {
   sql_always_where: NOT ${is_virtual_console} ;;
   join: consoles {
@@ -62,6 +62,25 @@ explore: sales_ranks {
   }
   join: sales_ranks_na {
     sql_on: ${sales_ranks_na.rank} = ${sales_ranks.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+}
+
+explore:  sales_ranks_games {
+
+  join: sales_ranks_games_eu {
+    sql_on: ${sales_ranks_games_eu.rank} = ${sales_ranks_games.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_games_jp {
+    sql_on: ${sales_ranks_games_jp.rank} = ${sales_ranks_games.rank} ;;
+    relationship: one_to_one
+    type: inner
+  }
+  join: sales_ranks_games_na {
+    sql_on: ${sales_ranks_games_na.rank} = ${sales_ranks_games.rank} ;;
     relationship: one_to_one
     type: inner
   }
