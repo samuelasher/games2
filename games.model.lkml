@@ -11,11 +11,13 @@ explore: games {
   }
   join: sales_by_console {
     from: sales
+    view_label: "Sales by Console (SLOW)"
     relationship: many_to_one
     sql_on: ${consoles.name} = ${sales_by_console.console} ;;
   }
   join: sales_by_game {
     from: sales
+    view_label: "Sales by Game (SLOW)"
     relationship: one_to_one
     sql_on: ${games.console} = ${sales_by_game.console} AND ${games.year} = ${sales_by_game.year}
       AND ${games.name} = ${sales_by_game.name};;
@@ -50,6 +52,7 @@ explore: sales {  join: consoles {
   }}
 
 explore: sales_ranks {
+  hidden: yes
   join: sales_ranks_eu {
     sql_on: ${sales_ranks_eu.rank} = ${sales_ranks.rank} ;;
     relationship: one_to_one
@@ -68,7 +71,7 @@ explore: sales_ranks {
 }
 
 explore:  sales_ranks_games {
-
+  hidden: yes
   join: sales_ranks_games_eu {
     sql_on: ${sales_ranks_games_eu.rank} = ${sales_ranks_games.rank} ;;
     relationship: one_to_one
