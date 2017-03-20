@@ -88,3 +88,8 @@ explore:  sales_ranks_games {
     type: inner
   }
 }
+
+explore:  games_base {
+  from: games
+  fields: []
+}
