@@ -90,6 +90,10 @@ explore:  sales_ranks_games {
 }
 
 explore:  games_base {
-  from: games
-  fields: [count]
+  from:  games
+  join: consoles {
+    relationship: many_to_one
+    sql_on: ${games_base.console} = ${consoles.name} ;;
+    type: left_outer
+  }
 }
