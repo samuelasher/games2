@@ -9,12 +9,6 @@ explore: games {
     sql_on: ${games.console} = ${consoles.name} ;;
     type: left_outer
   }
-  join: sales_by_console {
-    from: sales
-    view_label: "Sales by Console (SLOW)"
-    relationship: many_to_one
-    sql_on: ${consoles.name} = ${sales_by_console.console} ;;
-  }
   join: sales_by_game {
     from: sales
     view_label: "Sales by Game (SLOW)"
