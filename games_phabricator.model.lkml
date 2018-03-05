@@ -1,4 +1,4 @@
-connection: "video_games"
+connection: "sam_mysql"
 include: "*.view.lkml"
 include: "*.dashboard.lkml"
 persist_for: "99999 hours"
