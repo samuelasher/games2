@@ -1,4 +1,4 @@
-connection: "video_games"
+connection: "sam_mysql"
 
 explore: locations {
 }
