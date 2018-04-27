@@ -18,7 +18,10 @@ view: games {
     type: string
     sql: ${TABLE}.company ;;
   }
-
+  dimension: is_bracket {
+    type: yesno
+    sql: ${company} LIKE '{% raw %}{%{% endraw %}' ;;
+  }
   dimension: console {
     type: string
     hidden: no
