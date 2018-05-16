@@ -2,7 +2,6 @@
 
 The Ranking Anaylsis highlights SIDs for displacement to provide an Overall Sort Ranking. The Ranking Anaylsis has been split into specific parameters to ensure that SIDs with high coverage and limited utilization will be highlighted for displacement.
 
-The data is being ranked according to 7 parameters - Analytics, Basic Package, Coverage, Daily Usage, Excel, IB, Mail and Total Hits, and corresponding weighting filters can be used for prioritization. The rank for each parameter will be multiplied by the weightings applied and added together to create a Total Score. The Total Score is then sorted in ascending order to provide an Overall Sort Ranking for each SID.
 
 ### Ranking Analysis Summary
 The “% of Users to Target for Displacement” filter is defaulted to 10%, this can be ammended to customer specification. This is used when determining the number of SIDs reported in the “Number of Displacement Candidates” element and the “Top 10 Cost Centers with Displacement Candidates”. The Top 25 Displacement Candidates are also shown. You can explore the data in more detail by clicking into a visualization.
