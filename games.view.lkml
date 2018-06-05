@@ -168,6 +168,19 @@ view: games {
     sql: ${year} < ${consoles.release_year} ;;
   }
 
+filter: filter_21st_century {
+  type: yesno
+  default_value: "Yes"
+  sql: {% condition filter_21st_century %} ${is_21st_century} {% endcondition %} ;;
+}
+  dimension: is_21st_century {
+    type: yesno
+    sql: ${year} >= 2000 ;;
+    hidden: yes
+  }
+
+
+
   measure: count {
     type: count
     drill_fields: [console, name, year]
